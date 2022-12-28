@@ -50,12 +50,12 @@ const longestCommon = function (strs) {
 //26. Remove Duplicates from Sorted Array
 
 function removeDuplicates(nums) {
-  let k = 1;
-  for (let j=1; j < nums.length; j++) {
-    if (nums[j - 1] != nums[j]) {
-      nums[k] = nums[j];
-      k++;
+  let insert=1
+  for (let i=1; i<nums.length; i++) {
+    if (nums[i]!=nums[i-1]) {
+      nums[insert] = nums[i]
+      insert++
     }
   }
-  return k;
+  return insert
 }
